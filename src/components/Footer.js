@@ -4,16 +4,18 @@ import './Components.css';
 class Footer extends Component{
     render(){
         return(
-            <footer>
-                <ul className="footerul">
-                    <a>
-                        <li className="footerli">Linkedin</li>
-                    </a>
-                    <a>
-                        <li className="footerli">Github</li>
-                    </a>
-                </ul>
-            </footer>
+            <div className="page-container">
+                <footer>
+                    <ul className="footerul" >
+                        <a href="https://www.linkedin.com/in/jacobpursell/">
+                            <i className="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Jahkobe">
+                            <i className="fab fa-github" ></i>
+                        </a>
+                    </ul>
+                </footer>
+            </div>
         )
     }
 }

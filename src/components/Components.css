@@ -1,3 +1,15 @@
+*
+{
+ margin: 0px;
+ padding: 0px;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+/* navbar */
+
 .navbar{
     display: flex; 
     flex-direction: row;
@@ -21,7 +33,6 @@ a.nav-link{
     font-family: 'Fjalla One', sans-serif;
     color: black;
     list-style: none;
-    margin-left: 20px;
 }
 
 #hamburger{
@@ -33,11 +44,67 @@ a.nav-link{
     justify-content: flex-end;
 }
 
-.hometitle{
-    text-align: left;
+#navbar{
+    padding: 0;
+    background-color: rgb(251, 251, 251);
 }
 
+.hometitle{
+    text-align: center;
+}
+
+
+/* Landing Header */
+
+.landingPage{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../imgs/Mountains.jpg');
+    align-items: center;
+    justify-content: center;
+    background-size: cover; 
+    margin-bottom: 30px;
+}
+
+
+.slide-top {
+	-webkit-animation: slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-400px);
+              transform: translateY(-400px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-400px);
+              transform: translateY(-400px);
+    }
+  }
+
+
+#landingHeader{
+    margin-top: 800px;
+    color: white;
+}
+
+
+/* footer */
+
 .footerul{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -45,40 +112,202 @@ a.nav-link{
 
 .footerli{
     font-family: 'Fjalla One', sans-serif;
-    color: black;
+    font-weight: 900;
+    color: white;
+    list-style: none;
+}
+
+.footerli:hover{
+    color: lightblue;
 }
 
 footer {
-    margin-top: 20px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    height: 2.5rem;  
+    background-color: black;
+    padding: 0 !important;
+}
+
+.fab{
+    color: white;
+}
+
+.page-container {
+    position: relative;
+    min-height: 10vh;
+  }
+
+
+/* header */
+
+.homediv{
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+}
+
+
+
+/* Cards */
+
+.cardBorder{
+    background-color: snow;
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 800px;
+    border-radius: 3em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 2px 3px rgba(0, 0, 0, 30%);
+}
+
+.cardBorder:hover{
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.95);
+              transform: scale(0.95);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.95);
+              transform: scale(0.95);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+a {
+    color: inherit; 
+} 
+
+.cardMargin{
+    margin-top: 5vh;
+}
+
+.projectDescription{
+    margin-bottom: 5vh;
 }
 
 .cardsdiv{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    border:  black;
+    margin-top: 5em;
+    margin-bottom: 4em;
 }
 
 .card{
-    margin-top: 4em;
+    margin: 3vh auto;
     background-color: grey;
     height: 300px;
-    width: 300px;
-}
-
-#navbar{
-    padding: 0;
-    background-color: #5CDB95;
-}
-
-.homediv{
-    margin-top: 4em;
+    width: 500px;
 }
 
 .outdoorsproject{
     background: url('../imgs/outdoorsimg.png');
     background-size: 500px 300px;
     background-position: center;
+}
+
+.libationstationproject{
+    background: url('../imgs/libationstation.png');
+    background-size: 500px 300px;
+    background-position: center;
+}
+
+.lumberjackmanproject{
+    background: url('../imgs/lumberjackman.png');
+    background-size: 500px 300px;
+    background-position: center;
+}
+
+.lyricalproject{
+    background: url('../imgs/lyrical.png');
+    background-size: 500px 300px;
+    background-position: center;
+}
+
+.squaredestroyerproject{
+    background: url('../imgs/squaredestroyer.png');
+    background-size: 500px 300px;
+    background-position: center;
+}
+
+
+  
+
+
+
+
+
+    @media only screen and (max-width: 1400px) {
+    .cardBorder {
+        width: 800px
+    }
+
+    #landingHeader{
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cardBorder {
+        width: 600px
+    }
+
+    #landingHeader{
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .cardBorder {
+      width: 500px;
+    }
+
+    .card{
+        width: 500px;
+    }
+
+    #landingHeader{
+        max-width: 500px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .cardBorder {
+      width: 450px;
+    }
+
+    .card{
+        width: 450px;
+    }
+
+    #landingHeader{
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .cardBorder {
+      width: 300px
+    }
+
+    .card{
+        width: 300px;
+    }
+
+    #landingHeader{
+        max-width: 250px;
+    }
 }
